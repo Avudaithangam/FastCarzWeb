@@ -14,11 +14,13 @@ pool:
   name: Default
 
 steps:
-#- task: DotNetCoreCLI@2
-#  inputs:
-#    command: 'build'
-#    arguments: '--configuration $(buildConfiguration)'
-#  displayName: 'Build $(buildConfiguration)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    arguments: '--configuration $(buildConfiguration)'
+  displayName: 'Build $(buildConfiguration)'
+
+#TODO Code analysis
 
 - task: DotNetCoreCLI@2
   inputs:
