@@ -36,7 +36,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    repository: 'FastCarzWeb'
+    repository: 'fastcarzweb'
     command: 'build'
     Dockerfile: '**/Dockerfile'
     tags: |
@@ -53,8 +53,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      docker run -d -p 9084:80 --name FastCarzWeb FastCarzWeb:$(Build.BuildId)
-      
+      docker run -d -p 9084:80 --name fastcarzweb fastcarzweb:$(Build.BuildId)
+
 #- task: Bash@3
 #  inputs:
 #    targetType: 'inline'
@@ -72,5 +72,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-     docker rm -f FastCarzWeb
+     docker rm -f fastcarzweb
   condition: always()
