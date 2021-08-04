@@ -27,6 +27,7 @@ steps:
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
   displayName: 'Publish $(buildConfiguration)'
+
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
@@ -41,16 +42,19 @@ steps:
     tags: |
       $(Build.BuildId)
   displayName: Build Docker image
+
 #- task: Bash@3
 #  inputs:
 #    targetType: 'inline'
 #    script: 'docker run -d -p 9082:80 --name FastCarzWeb FastCarzWeb:$(Build.BuildId)'
+
 - task: PowerShell@2
   displayName: Run a container
   inputs:
     targetType: 'inline'
     script: |
       docker run -d -p 9084:80 --name FastCarzWeb FastCarzWeb:$(Build.BuildId)
+      
 #- task: Bash@3
 #  inputs:
 #    targetType: 'inline'
