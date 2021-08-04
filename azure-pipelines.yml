@@ -65,7 +65,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Invoke-WebRequest -Uri http://localhost:9084 -UseBasicParsing | select-object -property StatusCode
+      Invoke-WebRequest -Uri http://localhost:9084 -UseBasicParsing | select-object -property StatusCode| ft -HideTableHeaders
 
 - task: PowerShell@2
   displayName: Remove container
