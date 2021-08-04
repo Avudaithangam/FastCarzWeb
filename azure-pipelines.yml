@@ -65,7 +65,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      curl http://localhost:9084
+      Invoke-WebRequest -Uri http://localhost:9084 -UseBasicParsing | select-object -property StatusCode
 
 - task: PowerShell@2
   displayName: Remove container
