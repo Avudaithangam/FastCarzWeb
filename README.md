@@ -32,3 +32,7 @@ The build should not be successful if any test fails.
   - All the environment deployment is added on the same pipeline as above
 5) The deployments to QA and Prod should be enabled with Approvals from approvers only.
   - The QA and Prod environments have been setup in a way that the deployment happens only on approval. https://dev.azure.com/avuvig/FastCarz/_environments/6/checks
+
+
+# Known Issues
+- The pipeline repository trigger is not working even when it is defined correctly
