@@ -36,3 +36,4 @@ The build should not be successful if any test fails.
 
 # Known Issues
 - The pipeline repository trigger is not working even when it is defined correctly
+- The tests repo does not contain any testcases to test the application
