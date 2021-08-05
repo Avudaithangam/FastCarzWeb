@@ -22,6 +22,7 @@ The build should not be successful if any test fails.
   - Deploy the docker image
   - Run the test on deployed image
   - Build fails on test failure
+  - On a successful build, the docker images are pushed to ACR
 - All the above tasks are done in the pipeline https://dev.azure.com/avuvig/FastCarz/_build?definitionId=18
 
 3) The deployment of code and artifacts should be automated to Dev environment.
