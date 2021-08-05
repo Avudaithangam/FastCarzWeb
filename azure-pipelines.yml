@@ -11,6 +11,8 @@ pool:
   #vmImage: ubuntu-latest
   name: Default
 
+trigger:
+- master
 steps:
 - task: DotNetCoreCLI@2
   inputs:
